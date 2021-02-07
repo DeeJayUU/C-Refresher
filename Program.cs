@@ -1,28 +1,24 @@
 ﻿using System;
 
-namespace LoopExercise1
+namespace LoopExercise2
 {
-       
-        class Program
+    class Program
+    {      
+               
+        /*
+         * 
+         * Write a console-based application that sums the integers
+           from 1 to 50
+         * 
+         * */
+        static void Main(string[] args)
         {
-            /*
-             * 
-             *  Write a console-based application that prompts a user for an
-                hourly pay rate. While the user enters values less than £5.65
-                or greater than £49.99, continue to prompt the user. Before
-                the program ends, display the valid pay rate
-             * 
-             * */
-            static void Main(string[] args)
+            int sum = 0;
+            for (int i = 1; i <= 50; i++)
             {
-                double payRate;
-                do
-                {
-                    Console.WriteLine("Please enter a valid payrate");
-                    payRate = double.Parse(Console.ReadLine());
-                } while (payRate < 5.65 || payRate > 49.99);
-
-                Console.WriteLine("The valid payrate that you entered is {0}", payRate);
+                sum += i;
             }
+            Console.WriteLine("The sum is {0}", sum);
+        }
     }
 }
